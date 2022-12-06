@@ -1,0 +1,26 @@
+@mixin shake-animation() {
+  @keyframes shake-animation {
+    10%,
+    90% {
+      transform: translateX(-1px);
+    }
+
+    20%,
+    80% {
+      transform: translateX(2px);
+    }
+
+    30%,
+    50%,
+    70% {
+      transform: translateX(-3px);
+    }
+
+    40%,
+    60% {
+      transform: translateX(3px);
+    }
+  }
+
+  animation: shake-animation 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}

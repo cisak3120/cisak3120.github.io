@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./main.js" defer></script>
+    <title>TS Simple Quiz</title>
+  </head>
+  <body>
+    <main>
+      <!-- Questions -->
+      <div class="question">
+        <h1 class="question__number">Question</h1>
+        <p class="question__time">TIME SPENT: 0s</p>
+        <p class="question__text"></p>
+      </div>
+      <!-- Answers -->
+      <div class="answer">
+        <label class="answers__answer" for="a">
+          <p class="answers__answer__text"></p>
+          <input
+            class="answers__answer__input"
+            type="radio"
+            name="answer"
+            id="a"
+          />
+        </label>
+        <label class="answers__answer" for="b">
+          <p class="answers__answer__text"></p>
+          <input
+            class="answers__answer__input"
+            type="radio"
+            name="answer"
+            id="b"
+          />
+        </label>
+        <label class="answers__answer" for="c">
+          <p class="answers__answer__text"></p>
+          <input
+            class="answers__answer__input"
+            type="radio"
+            name="answer"
+            id="c"
+          />
+        </label>
+        <label class="answers__answer" for="d">
+          <p class="answers__answer__text"></p>
+          <input
+            class="answers__answer__input"
+            type="radio"
+            name="answer"
+            id="d"
+          />
+        </label>
+      </div>
+      <!-- Navigation -->
+      <div class="navigation">
+        <div class="navigation__buttons">
+          <button class="navigation__buttons__button" disabled>
+            <img
+              class="
+                navigation__buttons__button__image
+                navigation__buttons__button__image--first
+              "
+              src="./assets/arrows.png"
+              alt="arrows"
+            />
+            Previous
+          </button>
+          <button class="navigation__buttons__button">
+            Next
+            <img
+              class="navigation__buttons__button__image"
+              src="./assets/arrows.png"
+              alt="arrows"
+            />
+          </button>
+          <button class="navigation__buttons__button">
+            Finish
+            <img
+              class="
+                navigation__buttons__button__image
+                navigation__buttons__button__image--last
+              "
+              src="./assets/finish.png"
+              alt="finish line"
+            />
+          </button>
+        </div>
+      </div>
+      <!-- Endgame modal -->
+      <div class="endgame-modal endgame-modal--hidden">
+        <div class="endgame-modal__backdrop"></div>
+        <div class="endgame-modal__modal">
+          <h2 class="endgame-modal__modal__heading">Quiz result</h2>
+          <p class="endgame-modal__modal__paragraph">
+            Game over. All questions have been answered. Check your score below.
+          </p>
+          <div
+            class="
+              endgame-modal__modal__details
+              endgame-modal__modal__details--hidden
+            "
+          >
+            <p class="endgame-modal__modal__details__toggler">
+              See details
+              <img
+                class="endgame-modal__modal__details__toggler__chevron"
+                src="./assets/chevron.png"
+                alt="chevron"
+              />
+            </p>
+            <ul class="endgame-modal__modal__details__list">
+              <li
+                class="
+                  endgame-modal__modal__details__list__item
+                  endgame-modal__modal__details__list__item--heading
+                "
+              >
+                Question
+              </li>
+              <li
+                class="
+                  endgame-modal__modal__details__list__item
+                  endgame-modal__modal__details__list__item--heading
+                "
+              >
+                Time
+              </li>
+              <li
+                class="
+                  endgame-modal__modal__details__list__item
+                  endgame-modal__modal__details__list__item--heading
+                "
+              >
+                Points
+              </li>
+            </ul>
+          </div>
+          <div class="endgame-modal__modal__score">
+            <p class="endgame-modal__modal__score__text">Your score</p>
+            <p class="endgame-modal__modal__score__points">
+              <span class="endgame-modal__modal__score__points__scored"></span>
+              /
+              <span class="endgame-modal__modal__score__points__total"></span>
+            </p>
+          </div>
+          <div class="endgame-modal__modal__buttons">
+            <button class="endgame-modal__modal__buttons__button">
+              Play again
+              <img
+                class="endgame-modal__modal__buttons__button__image"
+                src="./assets/refresh.png"
+                alt="refresh"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
